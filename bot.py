@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 import easyocr
 import requests
 
-API_URL = "PASTE_URL_HERE"
+API_URL = "https://schedule-ai-bot.onrender.com/add"
 
 reader = easyocr.Reader(['en','ru'])
 
@@ -30,7 +30,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("Ավելացվեց ✅")
 
-app = ApplicationBuilder().token("PASTE_TOKEN").build()
+app = ApplicationBuilder().token("ՔՈ_ԻՐԱԿԱՆ_TOKEN").build()
 app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
 
 app.run_polling()
